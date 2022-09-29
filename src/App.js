@@ -108,11 +108,7 @@ function App() {
         <a href="#" rel="noopener noreferrer" className="link bottom-left">
           Instagram
         </a>
-        <a
-          href="https://www.npmjs.com/package/react-three-fiber"
-          rel="noopener noreferrer"
-          className="link bottom-right"
-        >
+        <a href="#" rel="noopener noreferrer" className="link bottom-right">
           Projetos
         </a>
         <div className="stable">
