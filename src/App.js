@@ -4,7 +4,7 @@ import {
   useEffect,
   useCallback,
   useState,
-  useLayoutEffect
+  useLayoutEffect,
 } from "react";
 import { useNormalizedMouseRef } from "./hooks";
 import { Canvas } from "@react-three/fiber";
@@ -14,9 +14,6 @@ import { ParticlePlane } from "./particlePlane";
 import { Engine } from "./engine";
 
 import "./styles.css";
-
-// Uncomment to see how scene is positioned
-// import { OrbitControls } from "@react-three/drei";
 
 function Scene() {
   const engineRef = useRef();
@@ -74,7 +71,7 @@ function Cursor() {
   }, []);
   useNormalizedMouseRef({
     smoothing: 0.1,
-    onChange: handleMouseUpdate
+    onChange: handleMouseUpdate,
   });
 
   return <div ref={ref} className="cursor" />;
@@ -84,7 +81,9 @@ function Headline() {
   return (
     <div className="headline-content">
       <h1 className="heading v-number">Agilidade & Qualidade.</h1>
-      <h2 className="heading package">Para divulgar sua empresa.</h2>
+      <h2 className="heading package">
+        Aqui sua imaginação se torna realidade.
+      </h2>
     </div>
   );
 }
@@ -96,24 +95,21 @@ function App() {
       <div className="content">
         <Headline />
         <a
-          href="https://pmnd.rs/"
-          target="_blank"
+          href="#"
           rel="noopener noreferrer"
           className="link top-left poimandres"
         >
-          Varsel Agency
+          <img
+            src="https://cdn.discordapp.com/attachments/957964801517170688/1024704723128959036/Frame_36597.png"
+            alt=""
+            width={200}
+          />
         </a>
-        <a
-          href="https://github.com/pmndrs/react-three-fiber"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link bottom-left"
-        >
+        <a href="#" rel="noopener noreferrer" className="link bottom-left">
           Instagram
         </a>
         <a
           href="https://www.npmjs.com/package/react-three-fiber"
-          target="_blank"
           rel="noopener noreferrer"
           className="link bottom-right"
         >
@@ -121,8 +117,8 @@ function App() {
         </a>
         <div className="stable">
           <span className="low-opacity">[ </span>
-          <span className="status" />
-          stable <span className="low-opacity">]</span>
+          Mais de 260 empresas trabalham com a Varsel
+          <span className="low-opacity"> ] </span>
         </div>
       </div>
     </div>
